@@ -4,21 +4,24 @@
 
 // Basic class structure:
 
-class SamplePerson extends ParentSomething {
-  constructor(prop1, prop2) {
-    super(prop1, prop2);
-    this.prop1 = prop1;
-    this.prop2 = prop2;
+const Employee = require("./Employee");
+
+class Engineer extends Employee {
+  constructor(name, id, email, github) {
+
+    super(name, id, email);
+    this.github = github;
+
   }
 
-  getProp1() {
-    // return something...
+  getGithub() {
+    return this.github;
   }
 
-  setProp1() {
-    // do something...
+  getRole() {
+    return "Engineer";
   }
-    
 }
 
-module.exports = SamplePerson;
+
+module.exports = Engineer;
